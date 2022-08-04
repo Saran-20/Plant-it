@@ -1,0 +1,21 @@
+<%# <%= render "layouts/navbar" %> 
+
+<b><p id="frstxt">We love helping</p></b>
+		<b><p id="sectxt">you to save the</p></b>
+		<b><p id="trdtxt">earth</p></b>
+		<b><p id="bigtx">We help realize your dream in making a garden, Small things that can change the world, 
+		so you can enjoy the fresh air forever.	</p></b>
+
+		<div class="frame">
+		  <a href="about.html"><button class="customm-btn btnn-1">Read More</button></a>
+		</div>
+
+		<a href=""><i id="fcbk" class='bx bxl-facebook'></i></a>
+		<a href=""><i id="inst" class='bx bxl-instagram'></i></a>
+		<a href=""><i id="twitt" class='bx bxl-twitter'></i></a>
+
+	<%= image_tag('bgim.png',alt: "bg", id: "bg")%>
+
+	<%= button_to "Log out", destroy_user_session_path, method: :delete %>
+
+	

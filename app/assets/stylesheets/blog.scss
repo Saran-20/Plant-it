@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#img {
+    height: 500px;
+    width: 700px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+h1{
+    text-align: center;
+}
+.content {
+    width: 1000px;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+#terrace{
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 1440px;
+    height: 600px;
+    position: relative;
+}
+p{
+    font-size: large;
+}
+#plus{
+    position: relative;
+    bottom: 32vh;
+    left: 150vh;
+    font-size: 180%;
+}
+#add {
+    position: relative;
+    bottom: 33vh;
+    left: 150vh;
+    border: none;
+    background: none;
+    font-size: larger;
+    font-weight: 700;
+}

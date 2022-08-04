@@ -1,0 +1,41 @@
+// Place all the styles related to the natures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.display-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+    margin-top: 450px;
+    border-radius: 30px;
+    justify-content: center;
+    position: relative;
+}
+.show{
+    text-decoration: none;
+    position: relative;
+    left: 180px;
+    border-radius: 30px;
+    color:#000000;
+    width: 70px;
+    font-size: 25px;
+  }
+
+  .show:hover{
+    transform: translate();
+    color: #488F27;
+    
+  }
+.nme{
+   margin-top: 100px;
+   width: 40vh;
+   height: 65vh;
+   background-color: rgba(203, 196, 196, 0.273);
+   border-radius: 30px;
+   position: relative;
+}

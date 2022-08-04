@@ -1,0 +1,160 @@
+#bg{
+    height: 700px;
+    margin-left: 600px;
+    margin-top: 100px;
+  }
+  
+  
+  *{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  
+  // navbar starts --------------------------------------->
+  .container-a{
+    margin-left:10%;
+    margin-right:10%;
+  }
+  .logo h1{
+    font-size: 48px;
+    font-style: bold;
+    margin: 0;
+  }
+  
+  .navbar{
+    height: 80px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .items-nav, .icon-holder{
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .items-nav li,.icon-holder li{
+    display: inline-block;
+    
+  }
+  .items-nav li a,.icon-holder li a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 5px 20px;
+    color: black;
+    text-transform: capitalize;
+    border-bottom:2px solid transparent;
+  }
+  .items-nav li a:hover{
+    border-bottom:2px solid grey;
+  }
+  
+  // navbar ends   --------------------------------------->
+  
+  
+  
+  #frstxt{
+    font-size: 60px;
+    color: #488F27;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 100px;
+  }
+  #sectxt{
+    font-size: 60px;
+    color: #488F27;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 170px;
+    
+  }
+  #trdtxt{
+    font-size: 60px;
+    color: #488F27;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 250px;
+  }
+  #bigtx{
+    width: 600px;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 370px;
+  }
+  
+  .frame {
+    // width: 90%;
+    margin: 40px auto;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 500px;
+  }
+  button {
+    margin: 20px;
+  }
+  .customm-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  
+  .btnn-1 {
+    background: #488F27;
+    background: #488F27;
+    border: none;
+  }
+  .btnn-1:hover {
+     background: #63a643;
+  background: linear-gradient(#63ad41, #63a943);
+  }
+  
+  #inst{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 700px;
+    font-size: 30px;
+  }
+  
+  #fcbk{
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 380px;
+    font-size: 30px;
+  }
+  
+  #twitt{
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 460px;
+    font-size: 30px;
+  }
+  
+  i:hover{
+    transform: scale(1);
+    color: #63a943;
+  }
+  
+  i{
+    color: #000;
+  }

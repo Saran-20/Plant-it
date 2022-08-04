@@ -1,0 +1,45 @@
+<%# <%= render "layouts/navbar" %> 
+
+<div class="fstwd">
+    <p id="frstx"> A beautiful plant is like having </p>
+    <p id="secdtxt"> a Friend around you!</p>
+    <div class="frame2">
+          <button class="custom-btn btn-16">Shop Now</button>
+    </div>
+    	<%= image_tag('shp-im.png',alt: "bg", id: "frimg")%>
+</div>
+
+<div class="plant-container">
+
+
+<p id="notice"><%= notice %></p>
+<div class="lsspo">
+<div class="display-container">
+    <% @natures.each do |nature| %>
+    
+    <p class="nme">
+   
+    <%= image_tag nature.image, class:"plant-im"%><br><br>
+        Name : <%= nature.name %><br><br>
+        Description : <%= nature.description %><br><br>
+        Category : <%= nature.category %><br><br>
+        Price : <%= nature.price %><br><br>
+        <%= link_to 'Show', nature , class:"show" %>
+
+        </p>
+       
+        <%# <td><%= link_to 'Edit', edit_nature_path(nature) %>
+        <%# <t><%= link_to 'Destroy', nature, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+   </div>
+</div>
+
+  
+   
+    
+   
+
+ 
+ 
+<%= link_to 'New Nature', new_nature_path %>

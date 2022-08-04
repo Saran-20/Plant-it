@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.abt{
+    justify-content: center;
+    padding: 100px;
+    background-color: rgba(203, 196, 196, 0.273);
+    border-radius: 30px;
+    width: 80%;
+    margin-left: 170px;
+    margin-top: 100px;
+}
+h3 {
+    position: relative;
+    margin-left: 200px;
+    top: 6vh;
+    color: #488F27;
+}
+li{
+    font-size: large;
+    top: 3vh;
+    position: relative;
+}
+h2{
+    color: #488F27;
+}
+h1{
+    position: relative;
+    top: 5vh;
+}
+#about{
+    height: 500px;
+    margin-left: 1000px;
+    position: absolute;
+    bottom: 25vh;
+}

@@ -1,0 +1,38 @@
+
+
+ <%# <%= render "layouts/navbar" %> 
+ 
+<%# < id="notice"><%= notice %>
+
+  <%= image_tag @nature.image ,class:"img"  %>
+
+<div class="details">
+
+  <strong>Name :</strong>
+  <%= @nature.name %>
+
+<br>
+<br>
+  <strong>Description :</strong>
+  <%= @nature.description %>
+
+<br>
+<br>
+  <strong>Category :</strong>
+  <%= @nature.category %>
+
+<br>
+<br>
+  <strong>Price :</strong>
+  <%= @nature.price %>
+</p>
+<br>
+
+<%# <%=link_to 'Add to Cart',%> 
+
+<%# <%=link_to 'Show', natures_path %> 
+</div>
+
+
+<%# <%= link_to 'Edit', edit_nature_path(@nature) %> 
+<%# <%= link_to 'Back', natures_path %> 

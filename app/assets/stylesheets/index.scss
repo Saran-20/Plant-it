@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.fstwd{
+    background-color: rgba(203, 196, 196, 0.273);
+    height: 400px;
+    width: 1458px;
+    position: absolute;
+    margin-left: 185px;
+    margin-top: 50px;
+}
+
+#frstx{
+    position: absolute;
+    font-size: 40px;
+    margin-left: 160px;
+    margin-top: 80px;
+    color: #488F27;
+}
+
+#secdtxt{
+    position: absolute;
+    font-size: 40px;
+    margin-left: 160px;
+    margin-top: 150px;
+    color: #488F27;
+}
+
+.frame2 {
+    // width: 90%;
+    margin: 40px auto;
+    margin-left: 160px;
+    margin-top: 240px;
+  }
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgb(255, 255, 255),
+     7px 7px 20px 0px rgb(255, 255, 255),
+     4px 4px 5px 0px rgb(255, 255, 255);
+    outline: none;
+  }
+
+  .btn-16 {
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px rgb(255, 255, 255),
+     -4px -4px 5px 0px rgb(255, 255, 255),
+     7px 7px 20px 0px rgb(255, 255, 255),
+     4px 4px 5px 0px rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
+  }
+
+  #frimg{
+    position: absolute;
+    bottom: 1px;
+    margin-left: 800px;
+  }
+
+
+  .shp1{
+    background-color: rgba(203, 196, 196, 0.273);
+    // position: absolute;
+    height: 630px;
+    width: 400px;
+    margin-left: 250px;
+    margin-top: 500px;
+    border-radius: 30px;
+    
+  }
+
+  .plant-im{
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+
+  .nme{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  
+
+  .spfrs{
+    position: absolute; 
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: 60px
+  }
+  
+  .but-shw{
+    position: absolute;
+    margin-left: 160px;
+    text-decoration: none;
+    color:#000000;
+    width: 70px;
+    bottom: -230px;
+    font-size: 25px;
+  }
+
+  .but-shw:hover{
+    transform: translate();
+    color: #488F27;
+    
+  }
