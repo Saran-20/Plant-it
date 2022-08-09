@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+
+ .field {
+    border-radius: 30px;
+    height: 30px;
+    margin-top: 10px;    
+ }
+ .regform {
+    margin-left: 120px;
+    margin-top: 30px;
+}
+label {
+    margin-top: 20px;
+}
+.actions {
+    margin-top: 30px;
+    margin-left: 90px;
+}
+.tt{
+    margin-left: 50px;
+}
+
+.bgclr{
+   background-color:  #488f277a;
+   width: 500px;
+   margin-left: 600px;
+   position: absolute;
+   margin-top: 100px;
+   border-radius: 30px;
+   height: 600px;
+}
+.sign {
+    border: none;
+    background-color: #488F27;
+    color: white;
+    border-radius: 30px;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    right: 2vh;
+    font-weight: 500;
+}
+.msg {
+    color: red;
+    bottom: 680px;
+    position: absolute;
+    right: 70px;
+}
+.do {
+    position: absolute;
+    bottom: 650px;
+}
+.chk {
+    position: absolute;
+    bottom: 130px;
+}
+.lgclr {
+    background-color:  #488f277a;
+   width: 500px;
+   margin-left: 600px;
+   position: absolute;
+   margin-top: 100px;
+   border-radius: 30px;
+   height: 400px;
+}
+.lgform {
+    margin-left: 120px;
+    margin-top: 30px;
+}
+.fgclr {
+    background-color:  #488f277a;
+    width: 500px;
+    margin-left: 600px;
+    position: absolute;
+    margin-top: 100px;
+    border-radius: 30px;
+    height: 300px;
+ }
+.fgform {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.sub {
+    border: none;
+    background-color: #488F27;
+    color: white;
+    border-radius: 30px;
+    height: 30px;
+    width: 350px;
+    position: relative;
+    right: 12vh;
+    font-weight: 500;
+}
+
+

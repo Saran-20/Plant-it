@@ -22,7 +22,8 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
-
+    @post.header_image.attach(post_params[:header_image])
+    @post.files.attach(post_params[:files])
     respond_to do |format|
       if @post.save
         format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
@@ -47,6 +48,8 @@ class PostsController < ApplicationController
     end
   end
 
+  def hello
+  end
   # DELETE /posts/1 or /posts/1.json
   def destroy
     @post.destroy
@@ -64,7 +67,16 @@ class PostsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
+
     def post_params
-      params.require(:post).permit(:Title, :Content, :Image)
+      params.require(:post).permit(:title, :body, :header_image, files: [])
     end
+
+    def delete_file
+      file = ActiveStorage::Attachment.find(params[:id])
+      file.purge
+      redirect_back(fallback_location: posts_path)
+    end
+    
+
 end

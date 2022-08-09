@@ -1,8 +1,8 @@
 <%# <%= render "layouts/navbar" %> 
 
 <h1>Terrace Gardening</h1>
-<button id="add">Add your Blog</button>
-<a href=""><i id='plus' class='bx bxs-add-to-queue'></i></a>
+<%= button_to "Add your Blog", new_post_path, id:"add"%>
+<i id='plus' class='bx bxs-add-to-queue'></i>
  <%= image_tag('terrace.jpg',alt: "terrace", id: "terrace") %>
  <div class="content">
 
