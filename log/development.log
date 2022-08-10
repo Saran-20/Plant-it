@@ -58705,3 +58705,111 @@ Migrating to CreateCarts (20220810065314)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('379953682008581415')[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2022-08-10 14:02:05 +0530
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PlantsController#home as HTML
+  [1m[36mCart Load (1.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:12:in `current_cart'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:21:in `current_cart'
+  [1m[36mCart Create (1.7ms)[0m  [1m[32mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2022-08-10 08:32:05.560414', '2022-08-10 08:32:05.560414')[0m
+  ↳ app/controllers/application_controller.rb:21:in `current_cart'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:21:in `current_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering plants/home.html.erb within layouts/application
+  Rendered plants/home.html.erb within layouts/application (Duration: 140.6ms | Allocations: 77135)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/saranyasubbiah/Plant-it/public/packs
+[Webpacker] Hash: 4949f615883aa45838a7
+Version: webpack 4.46.0
+Time: 1485ms
+Built at: 10/08/2022 14:02:08
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-19ade39cc333985062bf.js    125 KiB  application  [emitted] [immutable]  application
+js/application-19ade39cc333985062bf.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-19ade39cc333985062bf.js js/application-19ade39cc333985062bf.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 3274.6ms | Allocations: 96613)
+Completed 200 OK in 3320ms (Views: 3278.5ms | ActiveRecord: 15.3ms | Allocations: 105689)
+
+
+Started GET "/" for ::1 at 2022-08-10 14:02:08 +0530
+Processing by PlantsController#home as HTML
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:12:in `current_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering plants/home.html.erb within layouts/application
+  Rendered plants/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 605)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 9143)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.9ms | Allocations: 10195)
+
+
+Started GET "/about.html" for ::1 at 2022-08-10 14:02:14 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/about.html"):
+  
+Started GET "/" for ::1 at 2022-08-10 14:02:22 +0530
+Processing by PlantsController#home as HTML
+  [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:12:in `current_cart'
+  Rendering layout layouts/application.html.erb
+  Rendering plants/home.html.erb within layouts/application
+  Rendered plants/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 609)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5667)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 1.1ms | Allocations: 6835)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('379953682008581415', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateLineItems (20220810084050)
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE `line_items` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `natures_id` bigint NOT NULL, `cart_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_line_items_on_natures_id` (`natures_id`), INDEX `index_line_items_on_cart_id` (`cart_id`), CONSTRAINT `fk_rails_d8c638a0d8`
+FOREIGN KEY (`natures_id`)
+  REFERENCES `natures` (`id`)
+, CONSTRAINT `fk_rails_af645e8e5f`
+FOREIGN KEY (`cart_id`)
+  REFERENCES `carts` (`id`)
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('379953682008581415')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('379953682008581415', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('379953682008581415')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('379953682008581415', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateLineItems (20220810084756)
+  [1m[35m (46.1ms)[0m  [1m[35mCREATE TABLE `line_items` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `natures_id` bigint NOT NULL, `cart_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_line_items_on_natures_id` (`natures_id`), INDEX `index_line_items_on_cart_id` (`cart_id`), CONSTRAINT `fk_rails_d8c638a0d8`
+FOREIGN KEY (`natures_id`)
+  REFERENCES `natures` (`id`)
+, CONSTRAINT `fk_rails_af645e8e5f`
+FOREIGN KEY (`cart_id`)
+  REFERENCES `carts` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220810084756')[0m
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('379953682008581415')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('379953682008581415', 0)[0m
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddQuantityToLineItems (20220810091527)
+  [1m[35m (25.8ms)[0m  [1m[35mALTER TABLE `line_items` ADD `quantity` int DEFAULT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220810091527')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('379953682008581415')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
