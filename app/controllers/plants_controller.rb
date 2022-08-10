@@ -1,17 +1,11 @@
+# frozen_string_literal: true
+
 class PlantsController < ApplicationController
-   def home
+  def home; end
 
-   end
+  def blog; end
 
-    def blog
+  def about; end
 
-    end
-    def about
-
-    end 
-    def landing
-        
-    end
-
-
+  def landing; end
 end

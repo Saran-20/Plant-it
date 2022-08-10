@@ -1,9 +1,13 @@
+# frozen_string_literal: true
+
 class NaturesController < ApplicationController
-  before_action :set_nature, only: %i[ show edit update destroy ]
+  before_action :set_nature, only: %i[show edit update destroy]
 
   # GET /natures or /natures.json
   def index
     @natures = Nature.all
+    @q = Nature.ransack(params[:q])
+    @natures = @q.result(distinct: true)
   end
 
   # GET /natures/1 or /natures/1.json
@@ -16,8 +20,7 @@ class NaturesController < ApplicationController
   end
 
   # GET /natures/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /natures or /natures.json
   def create
@@ -25,7 +28,7 @@ class NaturesController < ApplicationController
 
     respond_to do |format|
       if @nature.save
-        format.html { redirect_to nature_url(@nature), notice: "Nature was successfully created." }
+        format.html { redirect_to nature_url(@nature), notice: 'Nature was successfully created.' }
         format.json { render :show, status: :created, location: @nature }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +41,7 @@ class NaturesController < ApplicationController
   def update
     respond_to do |format|
       if @nature.update(nature_params)
-        format.html { redirect_to nature_url(@nature), notice: "Nature was successfully updated." }
+        format.html { redirect_to nature_url(@nature), notice: 'Nature was successfully updated.' }
         format.json { render :show, status: :ok, location: @nature }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +55,20 @@ class NaturesController < ApplicationController
     @nature.destroy
 
     respond_to do |format|
-      format.html { redirect_to natures_url, notice: "Nature was successfully destroyed." }
+      format.html { redirect_to natures_url, notice: 'Nature was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_nature
-      @nature = Nature.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def nature_params
-      params.require(:nature).permit(:name, :description, :category, :price, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_nature
+    @nature = Nature.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def nature_params
+    params.require(:nature).permit(:name, :description, :category, :price, :image)
+  end
 end

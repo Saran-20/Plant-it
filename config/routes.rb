@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
+  resources :carts
   resources :posts
   resources :natures
   # devise_for :users
   devise_for :users, controllers: {
     registrations: 'registrations'
   }
- 
+
   root 'plants#home'
   get 'plants/signup'
   get 'plants/blog'
@@ -13,7 +16,7 @@ Rails.application.routes.draw do
   get 'plants/landing'
   get 'plants/home'
   post 'posts/new'
-  get "posts/page/hello", to: "posts#hello"
+  get 'posts/page/hello', to: 'posts#hello'
   resources :posts do
     member do
       delete :delete_file
