@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   resources :carts
   resources :posts
   resources :natures
+
   # devise_for :users
   devise_for :users, controllers: {
     registrations: 'registrations'
   }
 
+  post '/cart', to: 'natures#cart'
+  
   root 'plants#home'
   get 'plants/signup'
   get 'plants/blog'
@@ -17,6 +20,7 @@ Rails.application.routes.draw do
   get 'plants/landing'
   get 'plants/home'
   post 'posts/new'
+  get 'cart', to: 'natures#carts' 
   get 'posts/page/hello', to: 'posts#hello'
   resources :posts do
     member do

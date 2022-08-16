@@ -12,6 +12,8 @@
     </div>
   <% end %>
 
+<div class="position-relative">
+
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -37,7 +39,19 @@
     <%= form.text_field :image %>
   </div>
 
+<input type="hidden" name="nature[user_id]" value="<%= current_user.id %>" >
+
+  <%# <div class="field">
+    <%= form.label :image %>
+    <%# <%= form.text_field :input_html => { :value => 'user@example.com' }  %>
+  <%# </div> %> 
+
+
+  
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+</div>
 <% end %>

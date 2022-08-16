@@ -1,3 +1,181 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.h-img {
+    height: 600px;
+    width: 800px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 530px;
+}
+
+.blog {
+    margin-top: 700px;
+    margin-left: 230px;
+    font-size: 20px;
+    width: 1400px;
+    height: 400px;
+    background-color: rgba(203, 196, 196, 0.273);
+    border-radius: 10px;
+    padding: 1px 10px;
+}
+
+.mul-img {
+    height: 200px;
+    width: 400px;
+
+}
+
+.tit {
+    background-color: rgba(203, 196, 196, 0.273);
+    width: 400px;
+    height: 60px;
+    margin-left: 740px;
+    border-radius: 8px;
+    font-size: 40px;
+    padding: 1px 160px;
+}
+
+.pictures {
+    background-color: rgba(203, 196, 196, 0.273);
+    margin-top: 100px;
+    width: 1300px;
+    margin-left: 280px;
+    height: 220px;
+    padding: 10px 43px;
+    border-radius: 10px;
+}
+
+
+
+.blog-holder{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.blog-holder .blog-line{
+    height: 50vh;
+    width: 100%;
+    background-color: rgba(203, 196, 196, 0.273);
+    margin-bottom: 3rem;
+    border-radius: 50px;
+}
+.blog-holder .quote-form-holder{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-gap: 3rem;
+    height: 200px;
+    width: 100%;
+    justify-content: space-between;
+}
+.quote,.form{
+    height: 80vh;
+    background-color: rgba(203, 196, 196, 0.273);
+    border-radius: 50px;
+}
+.title {
+    background-color: #62a6438a;
+    margin-left: 80px;
+    width: 500px;
+    border-radius: 10px;
+    height: 70px;
+    margin-top: 50px;
+}
+.write {
+   font-size: 20px;
+   top: 790px;
+   margin-left: 20px;
+   position: absolute;
+}
+.txt_fld{
+    border-radius: 10px;
+    height: 40px;
+    margin-left: 90px;
+    width: 340px;
+    border: none;
+    top: 784px;
+    position: absolute;
+}
+.head-img {
+    background-color: #62a6438a;
+    margin-left: 80px;
+    width: 500px;
+    border-radius: 10px;
+    height: 70px;
+    margin-top: 50px;
+}
+.tit-hdimg {
+   font-size: 20px;
+   top: 910px;
+   margin-left: 20px;
+   position: absolute;
+}
+.hd-img {
+    border-radius: 10px;
+    height: 40px;
+    margin-left: 170px;
+    width: 340px;
+    border: none;
+    top: 910px;
+    position: absolute; 
+}
+.ur-blog {
+    background-color: #62a6438a;
+    margin-left: 90px;
+    width: 500px;
+    border-radius: 10px;
+    height: 300px;
+    margin-top: 50px;
+}
+.con-blog {
+    font-size: 20px;
+    top: 1020px;
+    margin-left: 20px;
+    position: absolute;
+}
+.txt-write {
+    border-radius: 10px;
+    height: 270px;
+    margin-left: 130px;
+    width: 340px;
+    border: none;
+    top: 1020px;
+    position: absolute; 
+}
+.ur-file {
+    background-color: #62a6438a;
+    margin-left: 90px;
+    width: 500px;
+    border-radius: 10px;
+    height: 70px;
+    margin-top: 50px;
+}
+.num-img {
+    font-size: 20px;
+    top: 1380px;
+    margin-left: 20px;
+    position: absolute;
+}
+.more-img {
+    border-radius: 10px;
+    height: 270px;
+    margin-left: 160px;
+    width: 340px;
+    border: none;
+    top: 1380px;
+    position: absolute;
+}
+.actions{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 1390px;
+    background-color: #62a6438a; 
+    border: none;
+    border-radius: 10px;
+    left: 850px;
+}

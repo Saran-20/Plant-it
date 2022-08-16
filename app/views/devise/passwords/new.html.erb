@@ -1,13 +1,17 @@
+    <%= image_tag('ARTI_plnt.jpg', alt:"logo", id:"for_img")%>
+
+
 <div class="fgclr">
 <div class="fgform">
 
-<h2>Forgot your password?</h2>
+
+<h2 class="ttl_for">Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="signup">
-    <%= f.label :email %><br>
+    <%= f.label :email, class:"for_nam"%><br>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"field"%>
   </div>
 
@@ -15,8 +19,8 @@
     <%= f.submit "Send me reset password instructions", class:"sub" %>
   </div>
 <% end %>
-
+<div class="losing">
 <%= render "devise/shared/links" %>
-
+</div>
 </div>
 </div>

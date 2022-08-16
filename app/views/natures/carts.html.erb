@@ -1,0 +1,18 @@
+
+
+<% cart = Cart.where(user_id: current_user.id) %>
+<% product = cart.each do |prod| %>
+ 
+ <% total_prod =  prod.nature_id %>
+<% final = Nature.where(id: total_prod) %>
+<% final.each do |fin| %>
+
+<%= fin.description %>
+<%= image_tag(fin.image) %>
+<%= fin.name %>
+<%= fin.category %>
+<%= fin.price %>
+<% end %>
+<hr>
+<% end %>
+

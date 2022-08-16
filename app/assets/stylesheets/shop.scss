@@ -31,8 +31,13 @@
 .frame2 {
     // width: 90%;
     margin: 40px auto;
-    margin-left: 160px;
-    margin-top: 240px;
+    margin-left: 350px;
+    margin-top: 300px;
+    position: absolute;
+    z-index: 3;
+  }
+  .srch {
+    height: 40px;
   }
   button {
     margin: 20px;

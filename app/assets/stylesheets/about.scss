@@ -34,5 +34,51 @@ h1{
     height: 500px;
     margin-left: 1000px;
     position: absolute;
-    bottom: 18vh;
+    bottom: 23vh;
+}
+.foter_div{
+    background-color: rgba(203, 196, 196, 0.273);
+    margin-top: 100px;
+    height: 400px;
+}
+
+#fot_img{
+    height: 30px;
+    margin-left: 220px;
+    margin-top: 50px;
+}
+
+.lst_fea{
+    margin-left: 240px;
+}
+
+li:hover{
+    transition: calc();
+    color: #488F27;
+    cursor: pointer;
+}
+
+.asp_fea{
+    margin-left: 435px;
+    top: 940px;
+    position: absolute;
+}
+
+#assp{
+    font-size: 30px;
+}
+
+.conect_soc{
+    margin-left: 680px;
+    position: absolute;
+    top: 940px;
+}
+
+.cnt_us{
+    font-size: 30px;
+    top: 10px;
+}
+
+#in_icn{
+    font-size: 40px;
 }

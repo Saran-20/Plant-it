@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_10_091527) do
+ActiveRecord::Schema.define(version: 2022_08_11_131031) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -41,18 +41,12 @@ ActiveRecord::Schema.define(version: 2022_08_10_091527) do
   end
 
   create_table "carts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "nature_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "line_items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "natures_id", null: false
-    t.bigint "cart_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "quantity", default: 1
-    t.index ["cart_id"], name: "index_line_items_on_cart_id"
-    t.index ["natures_id"], name: "index_line_items_on_natures_id"
+    t.index ["nature_id"], name: "index_carts_on_nature_id"
+    t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
   create_table "natures", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -61,14 +55,6 @@ ActiveRecord::Schema.define(version: 2022_08_10_091527) do
     t.string "category"
     t.integer "price"
     t.string "image"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "orders", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.text "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -95,6 +81,6 @@ ActiveRecord::Schema.define(version: 2022_08_10_091527) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "line_items", "carts"
-  add_foreign_key "line_items", "natures", column: "natures_id"
+  add_foreign_key "carts", "natures"
+  add_foreign_key "carts", "users"
 end
