@@ -1,0 +1,48 @@
+    <%= image_tag('ARTI_plnt.jpg', alt:"logo", id:"plnt-sig_img")%>
+
+
+  <div class="bgclr">
+<div class="regform">
+<h2 class="tt">Let's get started.</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+
+  <div class="signup">
+    <%= f.label :name ,class:"usr_fil"%><br>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"field" %>
+  </div>
+
+
+  <div class="signup">
+    <%= f.label :email ,class:"usr_fil"%><br>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"field" %>
+  </div>
+
+  <div class="signup">
+    <%= f.label :password ,class:"usr_fil"%>
+    <%# <% if @minimum_password_length %>
+    <%# <em>(<%= @minimum_password_length %> 
+    <%# characters minimum)</em> %> 
+    <%# <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class:"field" %>
+  </div>
+
+  <div class="signup">
+    <%= f.label :password_confirmation ,class:"usr_fil"%>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"field"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class:"sign" %>
+  </div>
+ 
+<% end %>
+
+<div class="ald_hv">
+<p>Already Have an account?<%= render "devise/shared/links" %>
+</div>
+ </div>
+
+ </div>

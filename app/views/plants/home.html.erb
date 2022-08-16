@@ -7,14 +7,14 @@
 		so you can enjoy the fresh air forever.	</p></b>
 
 		<div class="frame">
-		  <a href="about.html"><button class="customm-btn btnn-1">Read More</button></a>
+		  <%= button_to "Read More", plants_about_path, class:"customm-btn btnn-1" %>
 		</div>
 
-		<a href=""><i id="fcbk" class='bx bxl-facebook'></i></a>
-		<a href=""><i id="inst" class='bx bxl-instagram'></i></a>
-		<a href=""><i id="twitt" class='bx bxl-twitter'></i></a>
+		 <a href=""><i id="fcbk" class='bx bxl-facebook'></i></a>
+		 <a href=""><i id="inst" class='bx bxl-instagram'></i></a>
+		 <a href=""><i id="twitt" class='bx bxl-twitter'></i></a>
 
-	<%= image_tag('bgim.png',alt: "bg", id: "bg")%>
+	<%= image_tag('bgim.png',alt: "bg", id: "bg") %>
 
 	<%= button_to "Log out", destroy_user_session_path, method: :delete %>
 

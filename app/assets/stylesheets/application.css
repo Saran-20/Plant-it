@@ -15,9 +15,15 @@
  */
 
  .field {
-    border-radius: 30px;
-    height: 30px;
-    margin-top: 10px;    
+    border-radius: 10px;
+    height: 50px;
+    width: 400px;
+    margin-top: 10px; 
+    margin-left: 300px;  
+    background-color: rgb(220, 216, 216); 
+ }
+ .em_name{
+    margin-left: 300px;
  }
  .regform {
     margin-left: 120px;
@@ -27,32 +33,47 @@ label {
     margin-top: 20px;
 }
 .actions {
-    margin-top: 30px;
-    margin-left: 90px;
+    margin-top: 50px;
+    margin-left: 300px;
 }
 .tt{
-    margin-left: 50px;
+    margin-left: 300px;
+    width: 300px;
+}
+.ald_hv{
+    margin-left: 300px;
+    margin-top: 20px;
+    width: 300px;
+}
+.dnt_acc{
+    margin-top: 30px;
+    margin-left: 300px;
+    width: 400px;
 }
 
 .bgclr{
-   background-color:  #488f277a;
-   width: 500px;
    margin-left: 600px;
-   position: absolute;
    margin-top: 100px;
-   border-radius: 30px;
-   height: 600px;
 }
 .sign {
     border: none;
     background-color: #488F27;
     color: white;
-    border-radius: 30px;
-    height: 30px;
-    width: 100px;
+    border-radius: 10px;
+    height: 50px;
+    width: 400px;
+    margin-left: 20px;
     position: relative;
     right: 2vh;
     font-weight: 500;
+
+}
+.ttl_for{
+    margin-left: 300px;
+}
+.usr_fil{
+    margin-left: 300px;
+    width: 300px;
 }
 .msg {
     color: red;
@@ -65,30 +86,22 @@ label {
     bottom: 650px;
 }
 .chk {
+    margin-left: 300px;
+    width: 300px;
     position: absolute;
-    bottom: 130px;
 }
 .lgclr {
-    background-color:  #488f277a;
-   width: 500px;
-   margin-left: 600px;
-   position: absolute;
-   margin-top: 100px;
-   border-radius: 30px;
-   height: 400px;
+ margin-left: 700px;
+ margin-top: 100px;
 }
 .lgform {
     margin-left: 120px;
     margin-top: 30px;
 }
 .fgclr {
-    background-color:  #488f277a;
-    width: 500px;
     margin-left: 600px;
     position: absolute;
     margin-top: 100px;
-    border-radius: 30px;
-    height: 300px;
  }
 .fgform {
     margin-left: 100px;
@@ -98,12 +111,46 @@ label {
     border: none;
     background-color: #488F27;
     color: white;
-    border-radius: 30px;
-    height: 30px;
-    width: 350px;
+    border-radius: 10px;
+    height: 50px;
+    width: 400px;
     position: relative;
-    right: 12vh;
     font-weight: 500;
+    position: absolute;
+}
+.losing{
+    margin-left: 300px;
+    margin-top: 150px;
+}
+#plnt_img{
+    position: absolute;
+    height: 500px;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-left: 400PX;
+}
+.mis {
+    color: red;
+    margin-right: 20px;
+    /* position: relative;
+    bottom: 1vh; */
+}
+#plnt-sig_img{
+    position: absolute;
+    height: 400px;
+    border-radius: 20px;
+    margin-top: 200px;
+    margin-left: 400PX;
+}
+.for_nam{
+    margin-left: 300px;
+}
+#for_img{
+    position: absolute;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 200px;
+    margin-left: 400PX;
 }
 
 

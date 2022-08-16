@@ -1,6 +1,3 @@
-
-
-
 <div class="container-a">
     <div class="navbar">
          <%= image_tag('logo.png', alt:"logo", id:"logo")%>
@@ -12,14 +9,15 @@
                 <li><%= link_to "shop",natures_path  %></li>
             
                   <li><a href="/plants/about">About</a></li>
-                <li> <a href="#">SocialWeb</a></li>
                 <li> <a href="#">Review</a></li>
             </ul>
         </div>
         <div class="icon-nav">
             <ul class="icon-holder">
                 <li><a href="#"><i class='bx bx-cart'></i></a></li>
-                <li><a href="#"><i class='bx bx-user'></i></a></li>
+            <li>
+            <a href="/users/sign_in"><i class='bx bx-user'></i></a></li>
+
             </ul>
         </div>
     </div>

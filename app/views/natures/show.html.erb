@@ -28,11 +28,17 @@
 
 <br>
 
-<%# <%=link_to 'Add to Cart',%> 
+<form action="/cart" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="cart[nature_id]" value="<%= @nature.id %>">
+    <input type="hidden" name="cart[user_id]" value="<%= current_user.id %>">
+    <input type="submit" value="Add to Cart">
+</form>
 
-<%=link_to 'Show', natures_path 
 </div>
 
 
-# <%= %> link_to 'Edit', edit_nature_path(@nature) 
+<%# <%=  link_to 'Edit', edit_nature_path(@nature) %>
  <%= link_to 'Back', natures_path %> 
+
+

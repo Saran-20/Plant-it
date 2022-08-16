@@ -1,0 +1,36 @@
+    <%= image_tag('ARTI_plnt.jpg', alt:"logo", id:"plnt_img")%>
+
+<div class="lgclr">
+<div class="lgform">
+
+<h2 class="tt">Hello!</h2>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="signup">
+    <%= f.label :email ,class:"em_name" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"field" %>
+  </div>
+
+  <div class="signup">
+    <%= f.label :password ,class:"em_name" %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class:"field" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="chk">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in", class:"sign" %>
+  </div>
+<% end %>
+
+<div class="dnt_acc">
+<p>Don't have an Account<%= render "devise/shared/links"%>
+</div>
+</div>
+</div>

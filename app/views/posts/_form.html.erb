@@ -11,27 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+
+  <div class="title"><br>
+    <b><p class="write">Title</p></b>
+    <%= form.text_field :title, class:"txt_fld" %>
   </div>
 
- <div class="field">
-   <%= form.label :header_image %>
-   <%= form.file_field :header_image %>
+ <div class="head-img">
+  <b><p class="tit-hdimg">Header Image</p></b>
+   <%= form.file_field :header_image, class:"hd-img" %>
  </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <div class="ur-blog">
+   <b><p class="con-blog">Content</p></b>
+    <%= form.text_area :body, class:"txt-write" %>
   </div>
 
-  <div class="field">
-   <%= form.label :files %>
-   <%= form.file_field :files, multiple: true %>
+  <div class="ur-file">
+   <b><p class="num-img">Attachments</p></b>
+   <%= form.file_field :files, multiple: true, class:"more-img" %>
  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <div>
+    <%= form.submit :Create , class:"actions" %>
+   </div> 
 <% end %>
+

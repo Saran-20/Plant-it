@@ -19,6 +19,17 @@ class NaturesController < ApplicationController
     @nature = Nature.new
   end
 
+  def cart
+     @cart = Cart.new(cart_params)
+      if @cart.save
+        redirect_to
+      end
+  end
+
+  def carts
+
+  end
+
   # GET /natures/1/edit
   def edit; end
 
@@ -69,6 +80,13 @@ class NaturesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def nature_params
-    params.require(:nature).permit(:name, :description, :category, :price, :image)
+    params.require(:nature).permit(:name, :description, :category, :price, :image, :user_id)
   end
+
+
+  def cart_params
+    params.require(:cart).permit(:nature_id, :user_id)
+  end
+
+
 end

@@ -1,35 +1,29 @@
-<p id="notice"><%= notice %></p>
+<%# <p id="notice"><%= notice %>
+<div class="tit">
+    <%= @post.title %>
+  </div>
+  
+ 
 
-<h1>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</h1>
-
-<p>
+<div>
 <% if @post.header_image.attached?%>
-  <%= image_tag @post.header_image %>
+  <%= image_tag @post.header_image ,class:"h-img"%>
 <% end %>
-</p>
-   
- <p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+</div>
 
+ <div class="blog">  
+   <%= @post.body %>
+</div>
+
+<div class="pictures">
 <% if @post.files.any? %>
-   <h3>Attachments:</h3>
-   <ul>
    <% @post.files.each do |file| %>
-    <%= image_tag file %>
-   <li>
+    <%= image_tag file, class:"mul-img"%>
       <% link_to file.filename, rails_blob_path(file, disposition: :attachment) %>
      <%# <%= link_to 'Remove', delete_file_post_url(file.id), method: :delete, data: { confirm: 'Are you sure?' } %> 
-   </li>
-   </ul>
    <%end%>
    <%end%>
-
-    
+</div>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
 
