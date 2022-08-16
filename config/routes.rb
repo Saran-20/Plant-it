@@ -13,11 +13,10 @@ Rails.application.routes.draw do
 
   post '/cart', to: 'natures#cart'
   
-  root 'plants#home'
+  root 'plants#landing'
   get 'plants/signup'
   get 'plants/blog'
   get 'plants/about'
-  get 'plants/landing'
   get 'plants/home'
   post 'posts/new'
   get 'cart', to: 'natures#carts' 
