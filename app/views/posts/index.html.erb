@@ -3,17 +3,20 @@
 <h1>Posts</h1>
 
 
-  
-    <% @posts.each do |post| %>
-      Title : <%= post.title %><br>
-      Content :  <%= post.body %><br>
-        <%= link_to 'Show', post %>
-        <%= link_to 'Edit', edit_post_path(post) %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="all-blogs">  
+<ol>
+  <li>  <% @posts.each do |post| %>
+    <p class="tit-head">Title :</p>  <%= post.title %><br>
+    <p class="tit-head"> Content :</p>  <%= post.body %><br>
+        <%= link_to 'More', post, class:"btn-more" %>
+  </li>
+</ol>
+        <%# <%= link_to 'Edit', edit_post_path(post) %> 
+        <%# <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> 
       
     <% end %>
 
-
+</div>
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%# <%= link_to 'New Post', new_post_path %> 

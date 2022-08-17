@@ -8,6 +8,7 @@ class NaturesController < ApplicationController
     @natures = Nature.all
     @q = Nature.ransack(params[:q])
     @natures = @q.result(distinct: true)
+
   end
 
   # GET /natures/1 or /natures/1.json
@@ -20,14 +21,25 @@ class NaturesController < ApplicationController
   end
 
   def cart
+    @cart = Cart.find_by(nature_id: params[:cart][:nature_id], users_id:current_user.id)
+    if @cart
+      @cart.increment(:quantity)
+      @cart.save
+      redirect_to root_path
+    else
      @cart = Cart.new(cart_params)
-      if @cart.save
-        redirect_to
-      end
+     if @cart.save
+     redirect_to root_path
+     else
+       render plain: 'failed'
+     end
+   end
+def cart_params
+  params.require(:cart).permit(:nature_id, :user_id)
+end
   end
 
   def carts
-
   end
 
   # GET /natures/1/edit
@@ -80,7 +92,7 @@ class NaturesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def nature_params
-    params.require(:nature).permit(:name, :description, :category, :price, :image, :user_id)
+    params.require(:nature).permit(:name, :description, :category, :price, :image, :users_id)
   end
 
 

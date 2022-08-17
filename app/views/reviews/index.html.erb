@@ -1,0 +1,34 @@
+ <h2 class="rev-let">Reviews</h2>
+ <div class="reviews">
+ 
+      <% @reviews.each do |review| %>  
+        <b><p class="word"> Name : </b><%= review.name %>
+        <b><p class="word">Comments : </b><%= review.comments %><br><br><hr>
+      <% end %>
+  </div>
+   <%# <% @review.each do |review| %> 
+
+<%# <><%= review.name %>
+  <%# <><%= review.comments %>
+<%# <%= link_to "Back", reviews_path %> 
+<%# <%= link_to "Edit", edit_review_path(review)%> 
+
+<%# <% end %> 
+
+
+  <div class="rev-form">
+  <form action="/review" method="post">
+  <input type="hidden" name="authenticity_token" value="D5TddQruJppDD3..." />
+     <label for="name" class="rev-name">Name :</label>
+  <input type="text" id="name" name="review[name]"><br>
+
+   <label for="comments" class="rev-comments">Comments :</label>
+  <input type="text" id="comments" name="review[comments]"><br>
+
+  <button type="submit" class="rev-btn">Submit</button>
+  </form>
+  </div>
+
+  <%= image_tag('review.jpg',alt: "rev", id: "rev-img") %>
+
+  

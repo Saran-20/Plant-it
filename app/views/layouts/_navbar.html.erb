@@ -9,14 +9,15 @@
                 <li><%= link_to "shop",natures_path  %></li>
             
                   <li><a href="/plants/about">About</a></li>
-                <li> <a href="#">Review</a></li>
+                <li> <a href="/reviews">Review</a></li>
             </ul>
         </div>
         <div class="icon-nav">
             <ul class="icon-holder">
                 <li><a href="#"><i class='bx bx-cart'></i></a></li>
-            <li>
-            <a href="/users/sign_in"><i class='bx bx-user'></i></a></li>
+           <li><%= button_to "Signup",new_user_registration_path, class:"login"%></li>
+           <li><%= button_to "Login",new_user_session_path , class:"login"%></li>
+           <li> <%= button_to "Log out", destroy_user_session_path, method: :delete, class:"logout" %></li>
 
             </ul>
         </div>

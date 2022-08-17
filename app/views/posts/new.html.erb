@@ -4,9 +4,12 @@
 
 <div class="container">
 <div class="blog-holder">
-  <div class="blog-line"></div>
+  <div class="blog-line"><%= image_tag('plt_blg.jpg',alt: "blg", id: "blg") %></div>
   <div class="quote-form-holder">
-    <div class="quote"></div>
+    <div class="quote">
+    <p class="quote-blog"> A Blog is only as interesting as the interest shown in others </p>
+        <%= image_tag('blg-quote.webp',alt: "blg-quote", id: "blg-quote") %>
+      </div>
     <div class="form"><%= render 'form', post:@post %></div>
   </div>
 </div>

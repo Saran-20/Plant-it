@@ -15,7 +15,7 @@
     margin-left: 230px;
     font-size: 20px;
     width: 1400px;
-    height: 400px;
+    // height: 400px;
     background-color: rgba(203, 196, 196, 0.273);
     border-radius: 10px;
     padding: 1px 10px;
@@ -74,7 +74,6 @@
 }
 .quote,.form{
     height: 80vh;
-    background-color: rgba(203, 196, 196, 0.273);
     border-radius: 50px;
 }
 .title {
@@ -169,13 +168,59 @@
     top: 1380px;
     position: absolute;
 }
-.actions{
+.sub-btn{
     width: 200px;
     height: 50px;
     position: absolute;
-    top: 1390px;
+    top: 1450px;
     background-color: #62a6438a; 
     border: none;
     border-radius: 10px;
-    left: 850px;
+    left: 1140px;
 }
+.users-blog {
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #62a6438a;
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    color: black;
+    margin-left: 100px;
+    padding: 4px 8px;
+}
+#blg {
+    height: 50vh;
+    width: 100%;
+    margin-bottom: 3rem;
+    border-radius: 50px;
+}
+.quote-blog {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+#blg-quote {
+    height: 500px;
+    width: 480px;
+    border-radius: 10px;
+}
+.all-blogs {
+    background-color: #62a6438a;
+    font-size: large;
+    margin: 100px;
+    text-decoration: none;
+}
+.tit-head {
+    font-size: 25px;
+    font-weight: 300;
+}
+.btn-more {
+    text-decoration: none;
+    background-color: #2e720ee2;
+    height: 50px;
+    width: 100px;
+    color: black;
+
+}
+

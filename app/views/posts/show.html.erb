@@ -1,5 +1,7 @@
 <%# <p id="notice"><%= notice %>
 <div class="tit">
+<ol>
+  <li>
     <%= @post.title %>
   </div>
   
@@ -20,10 +22,12 @@
    <% @post.files.each do |file| %>
     <%= image_tag file, class:"mul-img"%>
       <% link_to file.filename, rails_blob_path(file, disposition: :attachment) %>
+  </li>
+</ol>
      <%# <%= link_to 'Remove', delete_file_post_url(file.id), method: :delete, data: { confirm: 'Are you sure?' } %> 
    <%end%>
    <%end%>
 </div>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%# <%= link_to 'Edit', edit_post_path(@post) %> 
+<%= link_to 'Blogs', posts_path, class:"users-blog"%>
 

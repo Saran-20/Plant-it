@@ -1,0 +1,57 @@
+// Place all the styles related to the reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.reviews {
+    background-color:rgba(203, 196, 196, 0.273);
+    margin: 100px;
+    height: auto;
+    padding: 40px 50px;
+    border-radius: 10px;
+    width: 800px;
+    left: 50px;
+    position: absolute;
+
+}
+.rev-let {
+    color: black;
+    margin-left: 900px;
+}
+.rev-form {
+    background-color: rgba(203, 196, 196, 0.273);
+    margin: 100px;
+    height: 300px;
+    width: 600px;
+    padding: 50px 50px;
+    border-radius: 10px;
+    right: 100px;
+    position: absolute;
+}
+#name {
+    border-radius: 10px;
+}
+#comments {
+    border-radius: 10px;
+}
+.rev-btn {
+    margin: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #62a6438a;
+    height: 50px;
+    width: 100px;
+    margin-left: 180px;
+    bottom: 5px;
+}
+.rev-name {
+    font-size: 30px;
+}
+.rev-comments {
+    font-size: 30px;
+}
+#rev-img {
+    height: 200px;
+    width: 300px;
+    margin-left: 1200px;
+    margin-top: 450px;
+}
