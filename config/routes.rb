@@ -14,10 +14,14 @@ Rails.application.routes.draw do
   }
 
   
+<<<<<<< HEAD
   root 'plants#home'
+=======
+  root 'plants#landing'
+  get 'plants/signup'
+>>>>>>> 9e3b0a54b95286ede46367d7a145ea4aa0c58e48
   get 'plants/blog'
   get 'plants/about'
-  get 'plants/landing'
   get 'plants/home'
   post 'posts/new'
   get 'cart', to: 'natures#carts' 
