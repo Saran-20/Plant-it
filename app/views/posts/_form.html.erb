@@ -29,11 +29,11 @@
 
   <div class="ur-file">
    <b><p class="num-img">Attachments</p></b>
-   <%= form.file_field :files, multiple: true, class:"more-img" %>
+   <%= form.file_field :files, multiple: false, class:"more-img" %>
  </div>
 
   <div>
-    <%= form.submit :Create , class:"actions" %>
+    <%= form.submit :Create , class:"sub-btn" %>
    </div> 
 <% end %>
 

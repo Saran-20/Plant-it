@@ -4,9 +4,13 @@
  
 <%# < id="notice"><%= notice %>
 
-  <%= image_tag @nature.image ,class:"img"  %>
 
 <div class="details">
+
+  <%= image_tag @nature.image ,class:"show-img"  %>
+<br>
+<br>
+
 
   <strong>Name :</strong>
   <%= @nature.name %>
@@ -32,7 +36,7 @@
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
     <input type="hidden" name="cart[nature_id]" value="<%= @nature.id %>">
     <input type="hidden" name="cart[user_id]" value="<%= current_user.id %>">
-    <input type="submit" value="Add to Cart">
+   <input type="submit" value="Add to Cart" class="cart-btn">
 </form>
 
 </div>

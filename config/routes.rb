@@ -1,20 +1,25 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :line_items
-  resources :carts
+  get 'reviews/index'
+  get 'reviews/new'
+  get 'reviews/create'
+  get 'reviews/show'
   resources :posts
   resources :natures
-
+  resources :reviews
   # devise_for :users
   devise_for :users, controllers: {
     registrations: 'registrations'
   }
 
-  post '/cart', to: 'natures#cart'
   
+<<<<<<< HEAD
+  root 'plants#home'
+=======
   root 'plants#landing'
   get 'plants/signup'
+>>>>>>> 9e3b0a54b95286ede46367d7a145ea4aa0c58e48
   get 'plants/blog'
   get 'plants/about'
   get 'plants/home'
@@ -26,6 +31,10 @@ Rails.application.routes.draw do
       delete :delete_file
     end
   end
+
+  post '/cart', to: 'natures#cart'
+
+  post 'review', to: 'reviews#create'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
