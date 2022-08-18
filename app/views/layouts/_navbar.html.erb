@@ -8,17 +8,19 @@
 
                 <li><%= link_to "shop",natures_path  %></li>
             
-                  <li><a href="/plants/about">About</a></li>
-                <li> <a href="/reviews">Review</a></li>
+                  <li><%= link_to "About", plants_about_path %></li>
+                <li> <a href="/reviews">Feedback</a></li>
             </ul>
         </div>
         <div class="icon-nav">
             <ul class="icon-holder">
-                <li><a href="#"><i class='bx bx-cart'></i></a></li>
-           <li><%= button_to "Signup",new_user_registration_path, class:"login"%></li>
-           <li><%= button_to "Login",new_user_session_path , class:"login"%></li>
-           <li> <%= button_to "Log out", destroy_user_session_path, method: :delete, class:"logout" %></li>
-
+                <li><a href="/cart"><em class='bx bx-cart'></em></a></li>
+                <% if user_signed_in? %>
+                           <li> <%= button_to "Log out", destroy_user_session_path, method: :delete, class:"logout-btn" %></li>
+<% else %>
+           <li><%= button_to "Signup",new_user_registration_path, class:"signup-btn"%></li>
+           <li><%= button_to "Login",new_user_session_path , class:"login-btn"%></li>
+<% end %>
             </ul>
         </div>
     </div>

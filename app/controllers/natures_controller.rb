@@ -19,17 +19,18 @@ class NaturesController < ApplicationController
   def new
     @nature = Nature.new
   end
+  
 
   def cart
-    @cart = Cart.find_by(nature_id: params[:cart][:nature_id], users_id:current_user.id)
+    @cart = Cart.find_by(nature_id: params[:cart][:nature_id], user_id:current_user.id)
     if @cart
       @cart.increment(:quantity)
       @cart.save
-      redirect_to root_path
+      redirect_to cart_path
     else
      @cart = Cart.new(cart_params)
      if @cart.save
-     redirect_to root_path
+     redirect_to cart_path
      else
        render plain: 'failed'
      end
@@ -39,11 +40,11 @@ def cart_params
 end
   end
 
-  def carts
+  def details
   end
-
   # GET /natures/1/edit
-  def edit; end
+  def edit
+  end
 
   # POST /natures or /natures.json
   def create

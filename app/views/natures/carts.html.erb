@@ -1,3 +1,6 @@
+
+<% @total_price = 0 %>
+
 <% Cart.all.each do |cart| %>
 
 <% @cart = cart.quantity %>
@@ -6,18 +9,31 @@
 
 <% cart = Cart.where(user_id: current_user.id) %>
 <% product = cart.each do |prod| %>
- 
  <% total_prod =  prod.nature_id %>
+
 <% final = Nature.where(id: total_prod) %>
 <% final.each do |fin| %>
 
-<%= fin.description %>
-<%= image_tag(fin.image) %>
-<%= fin.name %>
-<%= fin.category %>
-<%= fin.price %>
-<%= @cart %>
-<% end %>
-<hr>
+<div class="crt_pay">
+<%= image_tag(fin.image,class: "dec_img") %> 
+<div class="prd-det">
+<p class="name_p">Name : <%= fin.name %></p>
+<p class="cat_p">Category : <%= fin.category %></p>
+<p class="desc_p">Description : <%= fin.description%></p>
+
+ <p class="quant"> Quantity : <%= @quantity =  prod.quantity %>
+ <p class="price_p">Price : <% @price = fin.price %>
+ <%= @quantity_price = @quantity * @price %>
+ <% @total_price = @total_price + @quantity_price %> </p> 
+ 
+</div>
+   
+</div>
+
 <% end %>
 
+<% end %>
+ 
+
+        <h4 id="tot_prc"> Total_price : <%= @total_price %></h4>
+        <%= link_to 'Place Order', natures_details_path %>
