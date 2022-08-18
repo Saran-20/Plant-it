@@ -15,4 +15,9 @@ class RegistrationsController < Devise::RegistrationsController
     p"======================================"
     p current_password
   end
+  def sessions
+  if user
+    session[:current_user]
+
+  end
 end

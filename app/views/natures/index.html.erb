@@ -18,14 +18,13 @@
    
     <%= image_tag nature.image, class:"plant-im"%><br><br>
         Name : <%= nature.name %><br><br>
-        Description : <%= nature.description %><br><br>
         Category : <%= nature.category %><br><br>
         Price : <%= nature.price %><br><br>
         <%= link_to 'Show', nature , class:"show" %>
 
         </p>
        
-        <%# <td><%= link_to 'Edit', edit_nature_path(nature) %>
+       <%# <td><%= link_to 'Edit', edit_nature_path(nature)%>
         <%# <%= link_to 'Destroy', nature, method: :delete, data: { confirm: 'Are you sure?' } %> 
     <% end %>
   </div>
