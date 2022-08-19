@@ -1,7 +1,7 @@
  <h2 class="rev-let">Feedback</h2>
  <div class="reviews">
  
-      <% @reviews.each do |review| %>  
+      <% Review.all.each do |review| %>  
         <b><p class="word"> Name : </b><%= review.name %>
         <b><p class="word">Comments : </b><%= review.comments %><br><br><hr>
       <% end %>

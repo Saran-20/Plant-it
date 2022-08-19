@@ -37,8 +37,8 @@ class NaturesController < ApplicationController
    end
 
 def del
-   delete_cart = Cart.find_by(id: params[:id])
-  if delete_cart.destroy
+   @delete_cart = Cart.find_by(nature_id: params[:nature_id], user_id: current_user.id)
+  if @delete_cart.destroy
    render plain: "success"
   else
     render plain: "failed"

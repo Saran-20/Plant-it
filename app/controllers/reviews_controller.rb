@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     if @review.save
-      redirect_to @review, alert: "Review added successfully."
+      render 'reviews/index', alert: "Review added successfully."
     else
       redirect_to new_review_path, alert: "Error creating review."
     end
