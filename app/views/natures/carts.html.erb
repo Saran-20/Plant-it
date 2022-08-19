@@ -1,4 +1,6 @@
-
+<h1>Cart Items</h1>
+<br>
+<br>
 <% @total_price = 0 %>
 
 <% Cart.all.each do |cart| %>
@@ -27,13 +29,18 @@
  <% @total_price = @total_price + @quantity_price %> </p> 
  
 </div>
-   
-</div>
+
+<%= link_to 'delete', del_path(id: prod.id), method: :delete %>
+</div><hr>
 
 <% end %>
 
 <% end %>
+
  
 
         <h4 id="tot_prc"> Total_price : <%= @total_price %></h4>
+
+        <%# <div class="plc-order">
         <%= link_to 'Place Order', natures_details_path %>
+        <%# </div> %>

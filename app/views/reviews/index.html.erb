@@ -19,11 +19,11 @@
   <div class="rev-form">
   <form action="/review" method="post">
   <input type="hidden" name="authenticity_token" value="D5TddQruJppDD3..." />
-     <label for="name" class="rev-name">Name :</label>
-  <input type="text" id="name" name="review[name]"><br>
+     <label for="name" class="rev-name">Name </label>
+  <input type="text" id="name" name="review[name]" required ><br>
 
-   <label for="comments" class="rev-comments">Comments :</label>
-  <input type="text" id="comments" name="review[comments]"><br>
+   <label for="comments" class="rev-comments">Comments </label>
+  <input type="text" id="comments" name="review[comments]" required ><br>
 
   <button type="submit" class="rev-btn">Submit</button>
   </form>
