@@ -2,21 +2,21 @@
 
 <h1>Posts</h1>
 
+    <%= image_tag('blo-img.jpg',alt: "blg-quote", id: "blg-img") %>
 
 <div class="all-blogs">  
-<ol>
-  <li>  <% @posts.each do |post| %>
+
+    <% @posts.each do |post| %>
     <p class="tit-head">Title :</p>  <%= post.title %><br>
     <p class="tit-head"> Content :</p>  <%= post.body %><br>
         <%= link_to 'More', post, class:"btn-more" %>
-  </li>
-</ol>
-        <%# <%= link_to 'Edit', edit_post_path(post) %> 
+        <hr><br><br><br>
+    <%# <%= link_to 'Edit', edit_post_path(post) %> 
         <%# <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> 
       
     <% end %>
 
 </div>
-<br>
+
 
 <%# <%= link_to 'New Post', new_post_path %> 

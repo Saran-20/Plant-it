@@ -2,11 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
 .display-container{
     display: flex;
     flex-wrap: wrap;
@@ -17,27 +12,31 @@
     position: relative;
 }
 .show{
-    text-decoration: none;
-    position: relative;
-    left: 160px;
-    border-radius: 30px;
-    color:#000000;
-    width: 70px;
-    font-size: 25px;
+  text-decoration: none;
+  position: absolute;
+  left: 160px;
+  border-radius: 6px;
+  color: #000000;
+  width: 82px;
+  font-size: 25px;
+  background-color: #62a6438a;
+  height: 40px;
+  padding: 2px 11px;
   }
 
   .show:hover{
     transform: translate();
-    color: #488F27;
+    color: white;
     
   }
 .nme{
-   margin-top: 100px;
-   width: 40vh;
-   background-color: rgba(203, 196, 196, 0.273);
-   border-radius: 30px;
-   position: relative;
-   height: 600px;
+  margin-top: 100px;
+  width: 40vh;
+  background-color: rgba(203, 196, 196, 0.273);
+  border-radius: 30px;
+  position: relative;
+  height: 600px;
+  padding: 20px;
 }
 .details {
    background-color:rgba(203, 196, 196, 0.273) ;
@@ -72,7 +71,11 @@
 }
 .dec_img{
   height: 254px;
-  margin-top: 50px;
+  margin-top: 1px;
+  position: absolute;
+  border-radius: 10px;
+  height: 250px;
+  width: 300px;
 }
 .cart-items{
   background-color: #488F27;
@@ -84,4 +87,39 @@
   margin-left: 600px;
   width: 500px;
   position: relative
+}
+#tot_prc {
+  margin-left: 900px;
+}
+.plc-order {
+  margin-left: 1300px;
+  position: relative;
+  bottom: 4vh;
+  background-color: #62a6438a;
+  color: #000000;
+  width: 130px;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.buy-btn {
+  margin-left: 750px;
+  border: none;
+  border-radius: 10px;
+  background-color: #62a6438a;
+  width: 300px;
+  position: relative;
+  bottom: 4vh;
+}
+
+.plant-im {
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+  margin-left: 26px;
+  margin-top: 10px;
+}
+.pc_ord{
+  color: #000000;
+  text-decoration: none;
 }

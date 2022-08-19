@@ -39,6 +39,11 @@
    <input type="submit" value="Add to Cart" class="cart-btn">
 </form>
 
+<form action="/details" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+   <input type="submit" value="Buy Now" class="buy-btn">
+</form>
+
 </div>
 
 

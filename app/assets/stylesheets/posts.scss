@@ -29,9 +29,9 @@
 
 .tit {
     background-color: rgba(203, 196, 196, 0.273);
-    width: 400px;
-    height: 60px;
-    margin-left: 740px;
+    width: 700px;
+    /* height: 60px; */
+    margin-left: 583px;
     border-radius: 8px;
     font-size: 40px;
     padding: 1px 160px;
@@ -179,6 +179,7 @@
     left: 1140px;
 }
 .users-blog {
+
     text-decoration: none;
     border-radius: 4px;
     background-color: #62a6438a;
@@ -186,8 +187,10 @@
     height: 30px;
     width: 60px;
     color: black;
-    margin-left: 100px;
+    margin-left: 1517px;
     padding: 4px 8px;
+    top: 247px;
+
 }
 #blg {
     height: 50vh;
@@ -206,11 +209,11 @@
     border-radius: 10px;
 }
 .all-blogs {
-    background-color: #62a6438a;
-    font-size: large;
+    font-size: 20px;
     margin: 100px;
     text-decoration: none;
-    left: 850px;
+    width: 890px;
+    height: 283px;
 }
 .tit-head {
     font-size: 25px;
@@ -224,4 +227,11 @@
     color: black;
 
 }
+#blg-img{
+    margin-left: 1200px;
+    margin-top: 200px;
+    height: 400px;
+    width: 400px;
+    position: absolute;
 
+}

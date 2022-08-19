@@ -35,6 +35,17 @@ class NaturesController < ApplicationController
        render plain: 'failed'
      end
    end
+
+def del
+   delete_cart = Cart.find_by(id: params[:id])
+  if delete_cart.destroy
+   render plain: "success"
+  else
+    render plain: "failed"
+  end
+
+end
+
 def cart_params
   params.require(:cart).permit(:nature_id, :user_id)
 end
