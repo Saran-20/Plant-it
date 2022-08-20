@@ -2,8 +2,8 @@
  <div class="reviews">
  
       <% Review.all.each do |review| %>  
-        <b><p class="word"> Name : </b><%= review.name %>
-        <b><p class="word">Comments : </b><%= review.comments %><br><br><hr>
+        <strong><p class="word"> Name : </strong><%= review.name %>
+        <strong><p class="word">Comments : </strong><%= review.comments %><br><br><hr>
       <% end %>
   </div>
    <%# <% @review.each do |review| %> 
